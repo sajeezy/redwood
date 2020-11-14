@@ -1,5 +1,6 @@
+
 [build]
-command = "yarn rw build && yarn rw db up --no-db-client --auto-approve && yarn rw dataMigrate up"
+command = "cd api; yarn prisma migrate up --experimental && yarn rw build"
 publish = "web/dist"
 functions = "api/dist/functions"
 
